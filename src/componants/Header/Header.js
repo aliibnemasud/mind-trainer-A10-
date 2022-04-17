@@ -1,9 +1,18 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar} from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 import logo from '../../img/Group 53.png';
+import CustomLink from '../CustomLink/CustomLink';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+      };
+      
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -15,10 +24,12 @@ const Header = () => {
                         <Nav.Link href="#pricing">Pricing</Nav.Link>                        
                     </Nav> */}
                     <Nav className='ms-auto'>
-                        <Nav.Link><Link to="/" className='nav-link'>Home</Link></Nav.Link>
-                        <Nav.Link><Link to="/about" className='nav-link'>Services</Link></Nav.Link>
-                        <Nav.Link><Link to="/" className='nav-link'>About</Link></Nav.Link>
-                        <Nav.Link><Link to="/login" className='nav-link'>Login</Link></Nav.Link>                        
+                        <CustomLink to="/" className='nav-link'>Home</CustomLink>
+                        <CustomLink to="/services" className='nav-link'>Services</CustomLink>
+                        <CustomLink to="/about " className='nav-link'>About</CustomLink>
+                        <CustomLink to="/registered " className='nav-link'>Registered</CustomLink>
+
+                        {user?.uid ? <button className='btn btn-warning rounded' onClick={logout}>Sign Out</button> :<Link to="/login" className='btn btn-primary'>Login</Link>}                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>
