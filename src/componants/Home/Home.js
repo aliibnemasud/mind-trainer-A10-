@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import bannerimg from '../../img/bannerimg.png'
+import Footer from '../Footer/Footer';
 import Services from './Services/Services';
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
                 <img className='' src={bannerimg}  alt="" />
             </section>
             <Services></Services>
+            <Footer></Footer>
         </div>
     );
 };

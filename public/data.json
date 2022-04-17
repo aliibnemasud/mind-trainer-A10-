@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Business Coaching",
+        "price": 299,
+        "description": "In short, business coaching is a collaborative relationship between a business owner or CEO and a professional coach, aimed at strategically developing a successful business.",
+        "imgUrl": "https://i.ibb.co/WV0n56G/icon-1.png"
+    },
+    {
+        "id": 2,
+        "name": "Personal Development",
+        "price": 399,
+        "description": "From our free 30-Day Challenge to the eight-week Compassion Cultivation Training® course, Compassion It offers programs for individuals who are seeking more meaningful and connected lives.",
+        "imgUrl": "https://i.ibb.co/3Cchhvq/icon-2.png"
+    },
+    {
+        "id": 3,
+        "name": "Performance Coaching",
+        "price": 599,
+        "description": "We will give a series of techniques aiming to bring about continuous improvement in an individual. It's a feedback mechanism between two parties, a coach and a student, whereby the process of learning and development is fostered through detailed feedback.",
+        "imgUrl": "https://i.ibb.co/sJV8fnT/icon.png"
+    }
+]

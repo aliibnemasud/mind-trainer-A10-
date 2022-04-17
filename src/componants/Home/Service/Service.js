@@ -1,20 +1,15 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
 
-const Service = () => {
-
+const Service = ({service}) => {
+    const {name, description, imgUrl, price} = service;    
     return (
-        <Card style={{ width: '20rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-        </Card>
+        <div className='bg-light px-5 pt-5 pb-2'>
+            <img src={imgUrl} alt="" />
+            <h4 className='my-3'>{name}</h4>
+            <p>{description.slice(0, 200)}...</p>
+            <h3>${price}</h3>
+            <button className='btn btn-success'>Check Out</button>
+        </div>
     );
 };
 
