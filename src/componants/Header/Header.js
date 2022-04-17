@@ -36,7 +36,7 @@ const Header = () => {
                         <CustomLink to="/blogs" className='nav-link'>Blogs</CustomLink>
                         <CustomLink to="/registered" className='nav-link'>Registered</CustomLink>
 
-                        {user?.uid ? <button className='btn btn-warning rounded signBtn' onClick={logout}>Sign Out</button> :<Link to="/login" className='btn btn-primary signBtn'>Login</Link>}                        
+                        {user?.uid ? <button className='btn btn-warning signBtn' onClick={logout}>Sign Out</button> :<Link to="/login" className='btn btn-success signBtn'>Login</Link>}                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>
