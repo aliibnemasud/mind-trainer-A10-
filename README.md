@@ -1,5 +1,5 @@
 
-## Live site [Mind Trainor](https://github.com/facebook/create-react-app).
+## Live site [Mind Trainor](https://mindtrainor.netlify.app/).
 
 ## About this website
 
