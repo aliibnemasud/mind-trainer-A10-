@@ -1,7 +1,13 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Link [Mind Trainor](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About this website
 
-* React router bootstrep and hooks setup done
+* It is Single service provider website. Which is Online mind trainer give service to the people.
+* You can see, Some important question and answer on the blog section. If you want to know some developing knowledge.
+
+# Developing components
+
+* In this website has been added React, React router, Firebase authentication.
+* For the style part I have added react boot strap
+* I have used Require auth to some of the private route `Check Out` and `Registered` Route.
