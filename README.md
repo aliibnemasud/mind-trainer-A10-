@@ -1,5 +1,5 @@
 
-## Live Link [Mind Trainor](https://github.com/facebook/create-react-app).
+## Live site [Mind Trainor](https://github.com/facebook/create-react-app).
 
 ## About this website
 

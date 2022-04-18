@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification} from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const SignUp = () => {    
-    const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);    
+    const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
+    const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);    
     const nevigate = useNavigate();
     // const [name, setName] = useState('');    
     const [email, setEmail] = useState('');    
@@ -29,6 +30,7 @@ const SignUp = () => {
     const handelSignup = (e) => {        
         createUserWithEmailAndPassword(email, password)
         .then(()=> {
+            sendEmailVerification()
             nevigate(from)
         })       
         e.preventDefault();        
