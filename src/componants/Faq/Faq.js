@@ -6,9 +6,9 @@ const Faq = () => {
     return (
         <div className="container mx-auto my-5">
             <h1 className='text-center my-4'>Faq Section</h1>
-            <div className='d-flex justify-content-between align-items-center'>                
-            <img src={coach} alt="" />            
-            <Accordion className='w-50 align-items-center'>
+            <div className='d-flex justify-content-between align-items-center flex-wrap'>                
+            <img className='col-sm-12 col-lg-6' src={coach} alt="" />            
+            <Accordion className='align-items-center col-sm-12 col-lg-6 my-2'>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>What should I expect from an online coach?</Accordion.Header>
                     <Accordion.Body>
