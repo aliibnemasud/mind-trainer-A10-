@@ -31,6 +31,9 @@ const SocialLogin = () => {
         .then(()=> {
             navigate(from)
         })
+        .catch(error=> {
+            console.log(error);
+        })
     }
     
     return (
